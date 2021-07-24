@@ -12,9 +12,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "produtos")
 public class Produto {
-	
+
 	public Produto() {
-		
+
 	}
 
 	@Id
@@ -24,11 +24,9 @@ public class Produto {
 	private String descricao;
 	private int preco;
 	private LocalDate dataCadastro = LocalDate.now();
-	
+
 	@ManyToOne
 	private Categoria categoria;
-	
-	
 
 	public Produto(String nome, String descricao, int preco, Categoria categoria) {
 		this.nome = nome;

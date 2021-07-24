@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="categorias")
+@Table(name = "categorias")
 public class Categoria {
-	
+
 	public Categoria() {
-		
+
 	}
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	
+
 	public Categoria(String nome) {
 		this.nome = nome;
 	}
@@ -30,5 +30,5 @@ public class Categoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 }
